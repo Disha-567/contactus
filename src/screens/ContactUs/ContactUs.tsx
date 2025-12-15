@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
@@ -40,10 +40,10 @@ export const ContactUs = (): JSX.Element => {
     <div className="bg-black min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1 pt-[80px]">
+      <main className="flex-1 pt-20 md:pt-[80px]">
         {/* ================= HERO SECTION ================= */}
         <section
-          className="relative w-full min-h-[520px] overflow-hidden"
+          className="relative w-full min-h-[360px] md:min-h-[520px] overflow-hidden"
           style={{
             background: `
               radial-gradient(
@@ -56,19 +56,19 @@ export const ContactUs = (): JSX.Element => {
           }}
         >
           {/* Background stacked boxes (RIGHT SIDE) */}
-          <div className="absolute top-[130px] right-[4%] flex flex-col gap-12 z-10">
-            <div className="w-[500px] h-[57px] bg-[#03758b] rounded-none" />  {/* sharp edges */}
-            <div className="w-[500px] h-[57px] bg-[#111111] rounded-none" />  {/* sharp edges */}
-            <div className="w-[500px] h-[57px] bg-[#111111] rounded-none" />  {/* sharp edges */}
+          <div className="hidden md:flex absolute top-[130px] right-[4%] flex-col gap-12 z-10">
+            <div className="w-[500px] h-[57px] bg-[#03758b] rounded-none" />
+            <div className="w-[500px] h-[57px] bg-[#111111] rounded-none" />
+            <div className="w-[500px] h-[57px] bg-[#111111] rounded-none" />
 
           </div>
 
           {/* Center text (slightly down, above ONLY second box) */}
-          <div className="relative z-20 max-w-[1440px] mx-auto h-full px-6 flex items-center justify-center">
+          <div className="relative z-20 max-w-[1440px] mx-auto h-full px-4 md:px-6 flex items-center justify-center">
             <div className="text-center translate-y-[140px]">
               <p className="text-white text-lg mb-4">Contact us</p>
 
-              <h1 className="text-white text-[90px] font-bold leading-tight">
+              <h1 className="text-white text-5xl md:text-[90px] font-bold leading-tight">
                 Let&apos;s talk.
               </h1>
             </div>
@@ -76,12 +76,12 @@ export const ContactUs = (): JSX.Element => {
         </section>
 
         {/* ================= CONTACT CARDS ================= */}
-        <section className="max-w-[1440px] mx-auto px-6 py-24">
-          <div className="grid grid-cols-2 gap-8 max-w-[1000px] mx-auto mb-8">
+        <section className="max-w-[1440px] mx-auto px-4 md:px-6 py-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[1000px] mx-auto mb-8">
             {contactCards.map((card, index) => (
               <Link key={index} to={card.link}>
                 <Card className="bg-[#151515] hover:bg-[#1f1f1f] transition rounded-lg border-0 h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6 md:p-8">
                     <h3 className="text-[#00c5fb] text-xl font-bold mb-3">
                       {card.title}
                     </h3>
@@ -90,7 +90,7 @@ export const ContactUs = (): JSX.Element => {
                     </p>
                     <div className="flex items-center gap-2 text-[#00c5fb]">
                       <span className="text-sm">{card.linkText}</span>
-                      <ArrowRightIcon className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4" />
                     </div>
                   </CardContent>
                 </Card>
@@ -101,13 +101,13 @@ export const ContactUs = (): JSX.Element => {
           {/* Contact Details */}
           <Link to="/contact-details">
             <Card className="bg-[#151515] hover:bg-[#1f1f1f] transition rounded-lg border-0 max-w-[1000px] mx-auto">
-              <CardContent className="p-8 flex items-center justify-between">
+              <CardContent className="p-6 md:p-8 flex items-center justify-between">
                 <h3 className="text-[#00c5fb] text-xl font-bold">
                   Contact Details
                 </h3>
                 <div className="flex items-center gap-2 text-[#00c5fb]">
                   <span className="text-sm">Contact us</span>
-                  <ArrowRightIcon className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4" />
                 </div>
               </CardContent>
             </Card>
@@ -115,25 +115,25 @@ export const ContactUs = (): JSX.Element => {
         </section>
 
         {/* ================= ABOUT SECTION ================= */}
-        <section className="max-w-[1440px] mx-auto px-6 pb-24">
-          <div className="relative h-[400px] max-w-[900px] mx-auto rounded-lg overflow-hidden">
+        <section className="max-w-[1440px] mx-auto px-4 md:px-6 pb-24">
+          <div className="relative h-[300px] md:h-[400px] max-w-[900px] mx-auto rounded-lg overflow-hidden">
             <img
               src="/frame-190.png"
               alt="About Protega"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
-            <div className="relative h-full flex flex-col justify-center pl-[80px]">
+            <div className="relative h-full flex flex-col justify-center pl-6 md:pl-[80px]">
               <span className="text-xs uppercase tracking-widest text-black mb-2">
                 ABOUT US
               </span>
-              <h2 className="text-black text-4xl font-bold mb-12">
+              <h2 className="text-black text-2xl md:text-4xl font-bold mb-6 md:mb-12">
                 We protect what
                 <br />
                 people love.
               </h2>
 
-              <Button className="bg-[#00c5fb] hover:bg-[#00b0e0] text-black w-[220px]">
+              <Button className="bg-[#00c5fb] hover:bg-[#00b0e0] text-black w-full sm:w-[220px]">
                 Learn More About Protega
               </Button>
             </div>

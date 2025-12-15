@@ -8,15 +8,15 @@ export const ContactDetails = (): JSX.Element => {
     <div className="bg-[#010102] w-full min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1 pt-[113px] pb-24">
-        <div className="max-w-[1440px] mx-auto px-6 py-24">
+      <main className="flex-1 pt-20 md:pt-[113px] pb-24">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-6 py-16 md:py-24">
           <div className="max-w-[540px] mx-auto">
             <div className="text-center mb-12">
-              <h1 className="font-inter font-normal text-white text-[40px] mb-8">
+              <h1 className="font-inter font-normal text-white text-3xl md:text-[40px] mb-6 md:mb-8">
                 Contact Us
               </h1>
               <div className="text-left">
-                <h2 className="font-inter font-bold text-white text-[28px] mb-6">
+                <h2 className="font-inter font-bold text-white text-xl md:text-[28px] mb-4 md:mb-6">
                   Hey there!
                 </h2>
                 <p className="font-inter font-normal text-white text-lg leading-[1.6]">
