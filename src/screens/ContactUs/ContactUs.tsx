@@ -55,20 +55,17 @@ export const ContactUs = (): JSX.Element => {
             `,
           }}
         >
-          {/* Background stacked boxes (RIGHT SIDE) */}
-          <div className="hidden md:flex absolute top-[130px] right-[4%] flex-col gap-12 z-10">
-            <div className="w-[500px] h-[57px] bg-[#03758b] rounded-none" />
-            <div className="w-[500px] h-[57px] bg-[#111111] rounded-none" />
-            <div className="w-[500px] h-[57px] bg-[#111111] rounded-none" />
+          <div className="flex absolute top-[90px] md:top-[130px] right-0 md:right-[4%] flex-col gap-6 md:gap-12 z-10">
+            <div className="w-[280px] md:w-[500px] h-[50px] md:h-[57px] bg-[#03758b]" />
+            <div className="w-[280px] md:w-[500px] h-[50px] md:h-[57px] bg-[#111111]" />
+            <div className="w-[280px] md:w-[500px] h-[50px] md:h-[57px] bg-[#111111]" />
 
           </div>
 
-          {/* Center text (slightly down, above ONLY second box) */}
-          <div className="relative z-20 max-w-[1440px] mx-auto h-full px-4 md:px-6 flex items-center justify-center">
-            <div className="text-center translate-y-[140px]">
-              <p className="text-white text-lg mb-4">Contact us</p>
-
-              <h1 className="text-white text-5xl md:text-[90px] font-bold leading-tight">
+          <div className="relative z-20 max-w-[1440px] mx-auto h-full px-6 flex items-center justify-center">
+            <div className="text-center translate-y-[120px] md:translate-y-[140px]">
+              <p className="text-white text-base md:text-lg mb-4">Contact us</p>
+              <h1 className="text-white font-bold leading-tight" style={{ fontSize: "clamp(2.5rem, 10vw, 90px)" }}>
                 Let&apos;s talk.
               </h1>
             </div>
